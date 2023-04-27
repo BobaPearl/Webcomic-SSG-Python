@@ -1,0 +1,7 @@
+'001':
+    title: Title of First Page
+    Chapter: 'Whatever you want'
+    page: 'Again whatever'
+    note: 'Markdown goes here and it's convereted to HTML'
+    date: 'Fri, 09 Dec 2022 00:00:01 -0700' #retain this format Exactly case sensitive
+    desc: 'alt image source, and what the rss readers will see as the description'
