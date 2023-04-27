@@ -1,23 +1,14 @@
-How to get started:
+How to get started
 
-    Install Python: You need to have Python installed on your computer to run this script. You can download Python from https://www.python.org/downloads/
-
-    Install Required Libraries: The script uses three libraries, os, yaml, glob, shutil, datetime, dateutil, and markdown. You can install these libraries using the following command in your terminal or command prompt: pip install os yaml glob shutil datetime python-dateutil markdown.
-
-    Create a Project Folder: Create a new folder for your website project and open it in your terminal or command prompt.
-
+    Install Python= You need to have Python installed on your computer to run this script. You can download Python from https://www.python.org/downloads/
+    Install Required Libraries= The script uses three libraries, os, yaml, glob, shutil, datetime, dateutil, and markdown. You can install these libraries using the following command in your terminal or command prompt= pip install os yaml glob shutil datetime python-dateutil markdown.
+    Create a Project Folder= Create a new folder for your website project and open it in your terminal or command prompt.
     Copy the Script: Copy the provided script and save it as generate_html.py in your project folder.
-
     Copy the Front Matter File: Copy the front_matter.yaml file and save it in your project folder. This file contains the metadata for each page of your webcomic.
-
     Create Assets Folder: Create a new folder named assets in your project folder and copy the comic images into this folder.
-
     Create Image Folder: Create a new folder named img within the assets folder and copy the arrow images into this folder.
-
     Create CSS Folder: Create a new folder named css in your project folder and copy the CSS files into this folder.
-
     Run the Script: In your terminal or command prompt, navigate to your project folder and run the following command: python generate_html.py. This will generate HTML files based on the front matter data and an RSS feed.
-
     Upload the Files: Upload all the generated files, the images, and the CSS files to your website hosting service.
 
 
