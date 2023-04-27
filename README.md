@@ -1,3 +1,5 @@
+How to use
+
 This is a Python script for generating HTML pages and an RSS feed for a webcomic. The script first imports several modules necessary for the program to run: os, yaml, glob, shutil, datetime, dateutil, and markdown. The os module provides a way of using operating system dependent functionality, yaml is a library for parsing and emitting YAML, glob is a library for finding all files that match a pattern, shutil provides a higher level interface to file operations such as copying, datetime is a library for working with dates and times, dateutil is an extension to datetime to parse dates with more flexibility, and markdown is a library for converting Markdown to HTML.
 
 The first function read_front_matter(filename) takes a filename as an input and reads its contents, which are in YAML format, and returns the parsed data. The file is opened with the with statement, which automatically closes the file after it has been read.
