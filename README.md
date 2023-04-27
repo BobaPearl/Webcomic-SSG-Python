@@ -25,9 +25,9 @@ Steps to Set Up Your Webcomic Project
 
 6. Assets is where your comics go, the prefix has to match the key of the comic in the front_matter file, and the keys always have to be a 3 digit number so 001 002 003 etc. etc.
 
-7. You're going to want to edit the header or you'll end up just having my stuff in there without any of the image assets I use, so you'll want a logo.png for your banner, and to edit the title and what not, unless you want your comic to be called hello my first comic.
+7. You're going to want to edit the header or you'll end up just having my stuff in there without any of the image assets I use, so you'll want a logo.png for your banner, and to edit the title and what not, unless you want your comic to be called hello my first comic. Open this in notepad or your IDE of choice, find replace my comic with your comic's name, Me da author with your name, and yourwebsiteurl.com with whatever your website url is.
 
-7.  Run the Script: In your terminal or command prompt, navigate to your project folder and run the following command:
+8.  Run the Script: In your terminal or command prompt, navigate to your project folder and run the following command:
 
 ### python generate_html.py
 
