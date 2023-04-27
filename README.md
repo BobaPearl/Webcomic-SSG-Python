@@ -29,7 +29,7 @@ Steps to Set Up Your Webcomic Project
 
 7.  Run the Script: In your terminal or command prompt, navigate to your project folder and run the following command:
 
-###python generate_html.py
+### python generate_html.py
 
 This will generate HTML files based on the front matter data and an RSS feed. 8. Upload the Files: Upload all the generated files, the images, and the CSS files to your website hosting service.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
