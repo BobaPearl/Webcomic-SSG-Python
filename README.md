@@ -21,15 +21,36 @@ Steps to Set Up Your Webcomic Project
 
 4.  Copy the Site Info file: Copy the site_info.yaml file and save it in your project folder. This file contains the site info for your entire site.
 
-4. The img/comicnav contains the files for your arrows, retain the naming structure, or edit the script for the new names, it's all commented
+5.  Copy the header file: Copy the header.yaml file and save it in your project folder. If you have more then just your comic link, this puts those links in every page. Note you will have to create the HTML file for the new page, and put the header at the top. Here is my header for an example
 
-5. The css folder contains styles.css this one is your main style sheet.
+```
+<div id="nav">
+<a href="https://bobapearlessence.com"> Home </a> | <a href="https://bobapearlessence.com/steppe"> Steppe into the ring (Abandonded) </a> | <a href="https://bobapearlessence.com/voices.html"> Character voices </a> | <a href="https://bobapearlessence.com/rss.xml"> RSS Feed </a>
+</header>
+```
 
-6. Assets is where your comics go, the prefix has to match the key of the comic in the front_matter file, and the keys always have to be a 3 digit number so 001 002 003 etc. etc.
+Which shows up as 
 
-7. You're going to want to change the site info to your comic's name, your author name, and the like. It's all pretty clear, but the format for the website needs to be like you were actually accessing the homepage. So whatever your domain is.
+<div id="nav">
+<a href="https://bobapearlessence.com"> Home </a> | <a href="https://bobapearlessence.com/steppe"> Steppe into the ring (Abandonded) </a> | <a href="https://bobapearlessence.com/voices.html"> Character voices </a> | <a href="https://bobapearlessence.com/rss.xml"> RSS Feed </a>
+</header>
 
-8.  Run the Script: In your terminal or command prompt, navigate to your project folder and run the following command:
+You can edit this by looking at:
+
+```                for link in header_links:
+                    f.write(f'<a href="{site_info["domain"]}{link["link"]}"> {link["name"]} </a> | ')
+```
+in the code (at time of writing lines 96 and 97) What ever you put in the code after the and before the links will be added.
+
+6. The img/comicnav contains the files for your arrows, retain the naming structure, or edit the script for the new names, it's all commented
+
+7. The css folder contains styles.css this one is your main style sheet.
+
+8. Assets is where your comics go, the prefix has to match the key of the comic in the front_matter file, and the keys always have to be a 3 digit number so 001 002 003 etc. etc.
+
+9. You're going to want to change the site info to your comic's name, your author name, and the like. It's all pretty clear, but the format for the website needs to be like you were actually accessing the homepage. So whatever your domain is.
+
+10.  Run the Script: In your terminal or command prompt, navigate to your project folder and run the following command:
 
 ### python generate_html.py
 
