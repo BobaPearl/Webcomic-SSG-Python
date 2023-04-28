@@ -19,13 +19,15 @@ Steps to Set Up Your Webcomic Project
 
 3.  Copy the Front Matter File: Copy the front_matter.yaml file and save it in your project folder. This file contains the metadata for each page of your webcomic.
 
+4.  Copy the Site Info file: Copy the site_info.yaml file and save it in your project folder. This file contains the site info for your entire site.
+
 4. The img/comicnav contains the files for your arrows, retain the naming structure, or edit the script for the new names, it's all commented
 
 5. The css folder contains styles.css this one is your main style sheet.
 
 6. Assets is where your comics go, the prefix has to match the key of the comic in the front_matter file, and the keys always have to be a 3 digit number so 001 002 003 etc. etc.
 
-7. You're going to want to edit the header or you'll end up just having my stuff in there without any of the image assets I use, so you'll want a logo.png for your banner, and to edit the title and what not, unless you want your comic to be called hello my first comic. Open this in notepad or your IDE of choice, find replace my comic with your comic's name, Me da author with your name, and yourwebsiteurl.com with whatever your website url is.
+7. You're going to want to change the site info to your comic's name, your author name, and the like. It's all pretty clear, but the format for the website needs to be like you were actually accessing the homepage. So whatever your domain is.
 
 8.  Run the Script: In your terminal or command prompt, navigate to your project folder and run the following command:
 
