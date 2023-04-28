@@ -2,9 +2,11 @@ import os
 import yaml
 import glob
 import shutil
+import markdown
 from datetime import datetime
 from dateutil.parser import parse
 from dateutil import tz
+from markdown.extensions.nl2br import Nl2BrExtension
 
 def read_front_matter(filename):
     try:
@@ -56,8 +58,8 @@ def generate_html(front_matter, site_info, image_folder='assets'):
         title = metadata['title']
         page_number = key
         max_page_key = f'{len(front_matter):03d}'
-        author_notes = metadata['note'].replace('<br>', '<br>')
-
+        author_notes_html = markdown.markdown(metadata['note'], extensions=[Nl2BrExtension()])  # Convert the Markdown to HTML
+        
         try:
             with open(output_file, 'w') as f:
                 # <head> section
@@ -113,7 +115,7 @@ def generate_html(front_matter, site_info, image_folder='assets'):
                 f.write('</div>\n')
 
                 f.write('<h1>Author\'s Notes</h1>\n')
-                f.write(f'<p>{author_notes}</p>\n')
+                f.write(f'<div class="authorNotes">{author_notes_html}</div>\n')  # Write the HTML converted from Markdown to the file
                 f.write('</div>\n')
 
         except Exception as e:
