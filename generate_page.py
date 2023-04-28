@@ -23,6 +23,15 @@ def read_site_info(filename):
     except Exception as e:
         print(f"Error reading site info file: {e}")
         return None
+    
+def read_header_links(filename):
+    try:
+        with open(filename, 'r') as f:
+            return yaml.safe_load(f)
+    except Exception as e:
+        print(f"Error reading header links file: {e}")
+        return None
+
 
 
 def generate_navigation(current_page, max_page_key):
@@ -43,6 +52,7 @@ def generate_navigation(current_page, max_page_key):
 '''
 
 def generate_html(front_matter, site_info, image_folder='assets'):
+    header_links = read_header_links("header.yaml")
     last_generated_file = ""
     for key, metadata in sorted(front_matter.items()):  # Make sure the front_matter items are sorted
         file_prefix = key
@@ -81,10 +91,14 @@ def generate_html(front_matter, site_info, image_folder='assets'):
                 f.write('<header align="center">\n')
                 f.write('<img src="img/logo.png" alt="">\n')
                 f.write('<div id="nav">\n')
-                # ADD PAGES HERE
-                f.write(f'<a href=""> Home </a> | <a href="{site_info["domain"]}/some_other_page"> Some Other Page </a> | <a href="rss.xml"> Rss Feed: {site_info["domain"]}/rss.xml </a>\n')               
+
+                # Loop over header links
+                for link in header_links:
+                    f.write(f'<a href="{site_info["domain"]}{link["link"]}"> {link["name"]} </a> | ')
+                # Remove the last ' | ' from the header links
+                f.seek(f.tell() - 3, os.SEEK_SET)
+                f.write('\n')
                 f.write('</header>\n')
-                f.write('</div>\n')
                 
                 # Add these lines to output Chapter, Page, and Title
                 chapter = metadata['Chapter']
