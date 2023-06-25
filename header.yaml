@@ -1,8 +1,26 @@
 - name: Home
-  link: ""
-- name: Steppe into the ring (Abandonded)
-  link: "/steppe"
+  link: "https://bobapearlessence.com/"
+- name: Queen, The Pirate Queen
+  link: "https://bobapearlessence.com/queen"
+  is_comic: true
+  has_archives: true
+- name: Adventuring Boots
+  link: "https://bobapearlessence.com/boots"
+  is_comic: true
+  has_archives: true
+- name: Steppe (Abandonded)
+  link: "https://bobapearlessence.com/steppe"
+  is_comic: true
+  has_archives: false
 - name: Character voices
-  link: "/voices.html"
+  link: "https://bobapearlessence.com/voices.html"
 - name: RSS Feed
-  link: "/rss.xml"
+  link: "https://bobapearlessence.com/rss.xml"
+- name: In World Media
+  link: "https://bobapearlessence.com/media.html"
+- name: Fanart
+  link: "https://bobapearlessence.com/fanart.html"
+- name: Patreon
+  link: "https://www.patreon.com/bobapearlessence"
+- name: My Supporters
+  link: "https://bobapearlessence.com/credits.html"
